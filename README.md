@@ -25,3 +25,16 @@ source venv/bin/activate
 ```bash
 pip install .
 ```
+
+## Usage
+
+Пример использования
+
+```python
+import quaternion as q
+
+a = q.Quaternion(10, 20, 30, 40)
+b = q.Quaternion(5, 15, 25, 35)
+
+print(a + b)
+```
