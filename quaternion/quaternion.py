@@ -29,14 +29,18 @@ class Quaternion:
             self.a * other.d + self.b * other.c + self.c * other.b + self.d * other.a
         )
 
+    def conjugate(self):
+        return Quaternion(
+            self.a, -self.b, -self.c, -self.d
+        )
+
     def __truediv__(self, other):
         pass
 
     def inverse(self):
         pass
 
-    def conjugate(self):
-        pass
+
 
     def norm(self):
         pass

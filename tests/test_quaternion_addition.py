@@ -112,3 +112,13 @@ def test_quaternion_multiplication_three() -> None:
     assert result.b == 2716
     assert result.c == 2744
     assert result.d == 2748
+
+
+def test_quaternion_conjugate() -> None:
+    q1 = Quaternion(1, 2, 3, 4)
+    result = q1.conjugate()
+
+    assert result.a == 1
+    assert result.b == -2
+    assert result.c == -3
+    assert result.d == -4
