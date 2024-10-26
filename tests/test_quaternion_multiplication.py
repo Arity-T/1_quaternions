@@ -6,10 +6,10 @@ def test_quaternion_multiplication() -> None:
     q2 = Quaternion(5, 6, 7, 8)
     result = q1 * q2
 
-    assert result.a == 70
-    assert result.b == 68
-    assert result.c == 62
-    assert result.d == 60
+    assert result.a == -60
+    assert result.b == 12
+    assert result.c == 30
+    assert result.d == 24
 
 
 def test_quaternion_multiplication_identity() -> None:
@@ -29,7 +29,7 @@ def test_quaternion_multiplication_three() -> None:
     q3 = Quaternion(9, 10, 11, 12)
 
     result = q1 * q2 * q3
-    assert result.a == 2712
-    assert result.b == 2716
-    assert result.c == 2744
-    assert result.d == 2748
+    assert result.a == -1278
+    assert result.b == -396
+    assert result.c == -294
+    assert result.d == -672
