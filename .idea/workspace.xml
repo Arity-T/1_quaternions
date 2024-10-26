@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6cae48d-7901-48d9-9857-0e691a26cd7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quaternion/quaternion.py" beforeDir="false" afterPath="$PROJECT_DIR$/quaternion/quaternion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_quaternion_addition.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_quaternion_addition.py" afterDir="false" />
     </list>
@@ -60,7 +58,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="quaternion_algebra" />
                       </list>
                     </value>
                   </entry>
