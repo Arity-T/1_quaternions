@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6cae48d-7901-48d9-9857-0e691a26cd7f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quaternion/quaternion.py" beforeDir="false" afterPath="$PROJECT_DIR$/quaternion/quaternion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

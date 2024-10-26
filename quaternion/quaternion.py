@@ -52,7 +52,16 @@ class Quaternion:
 
 
     def inverse(self):
-        pass
+        norm_squred = self.norm() ** 2
+        if norm_squred == 0:
+            raise ZeroDivisionError("Cannot invert a zero-norm quaternion")
+        conjugate_q = self.conjugate()
+        return Quaternion(
+            conjugate_q.a / norm_squred,
+            conjugate_q.b / norm_squred,
+            conjugate_q.c / norm_squred,
+            conjugate_q.d / norm_squred
+        )
 
     def norm(self):
         return (self.a**2 + self.b**2 + self.c**2 + self.d**2) ** 0.5
