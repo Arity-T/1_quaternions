@@ -17,7 +17,9 @@ class Quaternion:
         )
 
     def __sub__(self, other):
-        pass
+        return Quaternion(
+            self.a - other.a, self.b - other.b, self.c - other.c, self.d - other.d
+        )
 
     def __mul__(self, other):
         pass
