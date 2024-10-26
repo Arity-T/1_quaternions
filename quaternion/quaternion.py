@@ -50,6 +50,19 @@ class Quaternion:
         except ZeroDivisionError:
             raise ZeroDivisionError("Quaternion divisor of zero")
 
+    def norm(self):
+        return (self.a ** 2 + self.b ** 2 + self.c ** 2 + self.d ** 2) ** 0.5
+
+    def normalized(self):
+        norm_val = self.norm()
+        if norm_val == 0:
+            raise ZeroDivisionError("Cannot normalize a zero-norm quaternion")
+        return Quaternion(
+            self.a / norm_val,
+            self.b / norm_val,
+            self.c / norm_val,
+            self.d / norm_val
+        )
 
     def inverse(self):
         norm_squred = self.norm() ** 2
@@ -62,6 +75,3 @@ class Quaternion:
             conjugate_q.c / norm_squred,
             conjugate_q.d / norm_squred
         )
-
-    def norm(self):
-        return (self.a**2 + self.b**2 + self.c**2 + self.d**2) ** 0.5
