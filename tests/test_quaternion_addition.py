@@ -23,7 +23,7 @@ def test_quaternion_addition_identity() -> None:
     assert result.d == 4
 
 
-def test_quaternion_addition_three():
+def test_quaternion_addition_three() -> None:
     q1 = Quaternion(1, 2, 3, 4)
     q2 = Quaternion(5, 6, 7, 8)
     q3 = Quaternion(9, 10, 11, 12)
@@ -33,3 +33,11 @@ def test_quaternion_addition_three():
     assert result.b == 18
     assert result.c == 21
     assert result.d == 24
+
+
+
+
+
+
+
+
