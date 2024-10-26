@@ -114,11 +114,12 @@ def test_quaternion_multiplication_three() -> None:
     assert result.d == 2748
 
 
-def test_quaternion_conjugate() -> None:
-    q1 = Quaternion(1, 2, 3, 4)
-    result = q1.conjugate()
+def test_quaternion_division() -> None:
+    q1 = Quaternion(10, 10, 20, 30)
+    q2 = Quaternion(2, 2, 2, 2)
+    result = q1 / q2
 
-    assert result.a == 1
-    assert result.b == -2
-    assert result.c == -3
-    assert result.d == -4
+    assert result.a == 8.75
+    assert result.b == -1.25
+    assert result.c == 3.75
+    assert result.d == 1.25
