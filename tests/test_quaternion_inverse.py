@@ -1,7 +1,7 @@
 from quaternion import Quaternion
 
 def test_quaternion_inverse() -> None:
-    q = Quaternion(1,2,3,4)
+    q = Quaternion(1,2,3,4).normalized()
     q_inv = q.inverse()
     identity_approx = q * q_inv # Approximately unit quaternion
     assert (
@@ -31,7 +31,7 @@ def test_quaternion_inverse_unit() -> None:
 
 
 def test_quaternion_inverse_negative() -> None:
-    q_neg = Quaternion(-1, -2, -3, -4)
+    q_neg = Quaternion(-1, -2, -3, -4).normalized()
     q_neg_inv = q_neg.inverse()
     identity_neg_approx = q_neg * q_neg_inv
     assert (
