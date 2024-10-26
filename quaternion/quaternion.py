@@ -23,10 +23,10 @@ class Quaternion:
 
     def __mul__(self, other):
         return Quaternion(
-            self.a * other.a + self.b * other.b + self.c * other.c + self.d * other.d,
-            self.a * other.b + self.b * other.a + self.c * other.d + self.d * other.c,
-            self.a * other.c + self.b * other.d + self.c * other.a + self.d * other.b,
-            self.a * other.d + self.b * other.c + self.c * other.b + self.d * other.a
+            self.a * other.a - self.b * other.b - self.c * other.c - self.d * other.d,
+            self.a * other.b + self.b * other.a + self.c * other.d - self.d * other.c,
+            self.a * other.c - self.b * other.d + self.c * other.a + self.d * other.b,
+            self.a * other.d + self.b * other.c - self.c * other.b + self.d * other.a
         )
 
     def conjugate(self):
