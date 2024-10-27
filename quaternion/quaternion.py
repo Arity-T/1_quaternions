@@ -23,10 +23,10 @@ class Quaternion:
 
     def __mul__(self, other):
         return Quaternion(
-            self.a * other.a + self.b * other.b + self.c * other.c + self.d * other.d,
-            self.a * other.b + self.b * other.a + self.c * other.d + self.d * other.c,
-            self.a * other.c + self.b * other.d + self.c * other.a + self.d * other.b,
-            self.a * other.d + self.b * other.c + self.c * other.b + self.d * other.a
+            self.a * other.a - self.b * other.b - self.c * other.c - self.d * other.d,
+            self.a * other.b + self.b * other.a + self.c * other.d - self.d * other.c,
+            self.a * other.c - self.b * other.d + self.c * other.a + self.d * other.b,
+            self.a * other.d + self.b * other.c - self.c * other.b + self.d * other.a
         )
 
     def conjugate(self):
@@ -50,9 +50,28 @@ class Quaternion:
         except ZeroDivisionError:
             raise ZeroDivisionError("Quaternion divisor of zero")
 
+    def norm(self):
+        return (self.a ** 2 + self.b ** 2 + self.c ** 2 + self.d ** 2) ** 0.5
+
+    def normalized(self):
+        norm_val = self.norm()
+        if norm_val == 0:
+            raise ZeroDivisionError("Cannot normalize a zero-norm quaternion")
+        return Quaternion(
+            self.a / norm_val,
+            self.b / norm_val,
+            self.c / norm_val,
+            self.d / norm_val
+        )
 
     def inverse(self):
-        pass
-
-    def norm(self):
-        pass
+        norm_squred = self.norm() ** 2
+        if norm_squred == 0:
+            raise ZeroDivisionError("Cannot invert a zero-norm quaternion")
+        conjugate_q = self.conjugate()
+        return Quaternion(
+            conjugate_q.a / norm_squred,
+            conjugate_q.b / norm_squred,
+            conjugate_q.c / norm_squred,
+            conjugate_q.d / norm_squred
+        )
