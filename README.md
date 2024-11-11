@@ -35,7 +35,7 @@ pip install .
 
 ## Usage
 
-Пример использования
+Примеры использования:
 
 ```python
 import quaternion as q
@@ -44,6 +44,23 @@ a = q.Quaternion(10, 20, 30, 40)
 b = q.Quaternion(5, 15, 25, 35)
 
 print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a.inverse())
+print(a.norm())
+print(a.normalized())
+
+```
+Вывод:
+```
+Quaternion(15, 35, 55, 75)
+Quaternion(5, 5, 5, 5)
+Quaternion(-2400, 300, 300, 600)
+Quaternion(1.1904761904761905, 0.0, -0.09523809523809523, -0.047619047619047616)
+Quaternion(0.0033333333333333327, -0.006666666666666665, -0.009999999999999998, -0.01333333333333333)
+54.772255750516614
+Quaternion(0.18257418583505536, 0.3651483716701107, 0.5477225575051661, 0.7302967433402214)
 ```
 
 ## Contributing
